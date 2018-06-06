@@ -1,0 +1,55 @@
+# Deploy community.hypernode.io to a Hypernode as the app user
+
+---
+- hosts: all
+  tasks:
+  - name: install botlist in homedir
+    copy: src=files/resources/botlist dest=/data/web/ owner=app group=app mode=0744
+
+  - name: install generate nginx blocklist script in home dir
+    copy: src=files/scripts/generate_nginx_blocklist.sh dest=/data/web/ owner=app group=app mode=0744
+
+  - name: install periodic deploy script in home dir
+    copy: src=files/scripts/periodic_deploy.sh dest=/data/web/ owner=app group=app mode=0744
+
+  - name: install renew letsencrypt script in home dir
+    copy: src=files/scripts/renew_letsencrypt.sh dest=/data/web/ owner=app group=app mode=0744
+
+  - name: write botlist nginx config
+    shell: /data/web/generate_nginx_blocklist.sh > /data/web/nginx/server.botlist
+
+  - name: add cron to periodically ensure the latest docs are deployed
+    cron:
+      name: deploy latest docs
+      job: /data/web/periodic_deploy.sh
+      state: present
+      minute: 32
+
+  - name: perform deploy
+    command: /data/web/periodic_deploy.sh
+
+  # See https://support.hypernode.com/knowledgebase/use-lets-encrypt-hypernode/
+  - name: ensure letsencrypt domains file
+    shell: echo '{{ app_name }}.hypernode.io' > /data/web/.dehydrated/domains.txt
+
+  - name: clean out crontab
+    shell: /usr/bin/crontab -r || /bin/true
+
+  - name: add cron automatically renew the letsencrypt certificate
+    cron:
+      name: automatically renew letsencrypt certificate
+      job: /data/web/renew_letsencrypt.sh
+      state: present
+      minute: 32
+      hour: 14
+
+  - name: request letsencrypt certificate
+    command: /data/web/renew_letsencrypt.sh
+
+  - name: check if varnish is enabled
+    shell: cat /etc/default/varnish | grep START | cut -d'=' -f2
+    register: varnish_enabled
+
+  - name: always redirect http to https on not-varnish node (skip in Vagrants)
+    copy: content="if ($scheme = http) {  return 301 https://$host$request_uri; }" dest=/data/web/nginx/server.rewrites force=yes
+    when: varnish_enabled.stdout == 'no'
