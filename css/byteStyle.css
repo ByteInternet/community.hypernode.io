@@ -1,0 +1,78 @@
+:root {
+	--theme-color: #FF7101;
+}
+
+.logo.top {
+    position: absolute;
+    width: 243px;
+    top: 50px;
+    left: 50px;
+}
+
+section.cover.show {
+	background: #FFF !important;
+	display: block;
+	height: auto;
+	background-image: url(https://static.hypernode.com/img/Heroshape-Hyperformance.svg) !important;
+	padding-bottom: 100px;
+	color: #FFF;
+}
+div.cover-main {
+	/*background-image: url(https://static.hypernode.com/img/Heroshape-Hyperformance.svg);*/
+}
+.anchor span {
+	color: inherit;
+}
+h1,h2,h3, section.cover h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+section.cover h1 {
+    font-size: 70px;
+    line-height: 90px;
+    font-weight: 700;
+    color: #FF7101;
+}
+h1 span {
+    /*color: #00366C;*/
+}
+h2 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 400;
+    color: #00366C;
+}
+h2 span {
+    font-weight: 800;
+    color: #FF7101;
+}
+h3 {
+    font-size: 22px;
+    line-height: 38px;
+    font-weight: 400;
+    color: #00366C;
+}
+
+section.cover ul {
+	max-width: 1000px;
+}
+
+section.cover ul li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+section.cover .cover-main>p:last-child a {
+	font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+section.cover .cover-main>p:last-child a:first-child {
+	color: #FFFFFF;
+	border-color: #FFFFFF;
+}
+
+section.cover .cover-main>p:last-child a:first-child:hover {
+	color: var(--theme-color, #FF7101);
+	border-color: var(--theme-color, #FF7101);
+}
