@@ -17,3 +17,8 @@ A local development environment based on [Vagrant](https://www.vagrantup.com/).
 [hypernode-magerun](https://community.hypernode.io/hypernode-magerun/)
 
 Handy tools for Magento packaged as an [n98-magerun](https://github.com/netz98/n98-magerun) plugin.
+
+[hypernode-api](Documentation/hypernode-api/README.md) (Beta)
+
+API which can be used to automate your processes for Hypernode. Please note that this
+API is still in beta and might be subject to change.
