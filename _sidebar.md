@@ -10,3 +10,9 @@
 
 * [MageReport](https://www.magereport.com/)
 * [Hypernode](https://hypernode.com/)
+
+* Hypernode-API
+
+  * [Hypernode-API](/Documentation/hypernode-api/README.md)
+  * [Whitelisting](/Documentation/hypernode-api/whitelisting/README.md)
+  * [Settings](/Documentation/hypernode-api/settings/README.md)
