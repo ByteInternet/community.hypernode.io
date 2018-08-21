@@ -17,7 +17,7 @@ This can simply be done on the Hypernode itself.
  ```
  hypernode-systemctl settings openvpn_enabled --value <True/False>
  ```
-This command will cause trigger the Hypernode automation to start installing OpenVPN and generate the configuration.
+This command will trigger the Hypernode automation to start installing OpenVPN and generate the configuration.
 Or delete all the configuration when disabling.
 
 ### Client configuration
