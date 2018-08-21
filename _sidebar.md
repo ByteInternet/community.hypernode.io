@@ -16,3 +16,7 @@
   * [Hypernode-API](/Documentation/hypernode-api/README.md)
   * [Whitelisting](/Documentation/hypernode-api/whitelisting/README.md)
   * [Settings](/Documentation/hypernode-api/settings/README.md)
+
+* Hypernode-VPN
+
+  * [Hypernode-VPN](/Documentation/hypernode-vpn/README.md)

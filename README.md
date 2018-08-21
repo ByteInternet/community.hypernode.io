@@ -22,3 +22,7 @@ Handy tools for Magento packaged as an [n98-magerun](https://github.com/netz98/n
 
 API which can be used to automate your processes for Hypernode. Please note that this
 API is still in beta and might be subject to change.
+
+[hypernode-vpn](Documentation/hypernode-vpn/README.md)
+
+A VPN solution for securely connecting to your database. Based on [OpenVPN](https://openvpn.net/)
