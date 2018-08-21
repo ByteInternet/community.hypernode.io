@@ -15,7 +15,7 @@ To be able to connect to your Hypernode you will need to install the latest vers
 ### Enable / Disable
 This can simply be done on the Hypernode itself.
  ```
- hypernode-systemctl settings openvpn --value <true/false>
+ hypernode-systemctl settings openvpn_enabled --value <true/false>
  ```
 This command will cause trigger the Hypernode automation to start installing OpenVPN and generate the configuration.
 Or delete all the configuration when disabling.
