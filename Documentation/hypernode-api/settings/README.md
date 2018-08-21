@@ -27,3 +27,5 @@ this setting see [this changelog](https://support.hypernode.com/changelog/releas
 - `blackfire_enabled`: boolean - Indicates whether BlackFire is enabled on your node.
 - `blackfire_server_id`: - string - The BlackFire server id for your blackfire setup.
 - `blackfire_server_token`: string - The BlackFire server token for your blackfire setup.
+- `openvpn_enabled`: boolean - Enable or disable [OpenVPN for secure connections](/Documentation/hypernode-vpn/README.md)
+
