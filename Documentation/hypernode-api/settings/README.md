@@ -12,6 +12,7 @@ PATCH: https://api.hypernode.com/v1/app/<your_app_name>/
 - `modern_ssl_config_enabled`: boolean - Indicates whether this node will have the Mozilla Modern SSL configuration 
 configured. This provides a higher level of security but loses compatibility with some browsers. For more information 
 about this setting see [this changelog](https://support.hypernode.com/changelog/release-4582-updated-configurable-ssl-ciphers/).
+- `modern_ssh_config_enabled`: boolean - Indicates whether this node will have a stricter set of SSH encryption algorithms enabled. See [this changelog for more information about this setting](https://support.hypernode.com/changelog/release-5139-stricter-ssh-encryption-algorithms/)
 - `mysql_tmp_on_data_enabled`: boolean - Indicates whether the MySQL `tmp` directory is located in the `/data/` 
 directory of the `app` user or in the `/tmp/` directory of the `root` user. The `root` user does not have the same amount
 of space available as the `app` user, so enabling this might prevent MySQL from taking up all disk space at the cost of
