@@ -29,4 +29,4 @@ this setting see [this changelog](https://support.hypernode.com/changelog/releas
 - `blackfire_server_id`: - string - The BlackFire server id for your blackfire setup.
 - `blackfire_server_token`: string - The BlackFire server token for your blackfire setup.
 - `openvpn_enabled`: boolean - Enable or disable [OpenVPN for secure connections](/Documentation/hypernode-vpn/README.md)
-
+- `varnish_esi_ignore_https_enabled`: boolean - Enable or disable [Varnish Edge Side Includes over HTTPS](https://support.hypernode.com/changelog/release-4560-varnish-edge-side-includes-https/)
