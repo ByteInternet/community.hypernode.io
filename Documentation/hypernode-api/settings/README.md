@@ -8,6 +8,7 @@ PATCH: https://api.hypernode.com/v1/app/<your_app_name>/
 `PATCH` can be used for setting settings for your Hypernode. You can specify the following data in the post request:
 
 - `php_version`: ("5.5", "5.6", "7.0", "7.1", "7.2") - Indicates which PHP version the node should be running.
+- `enable_ioncube`: boolean - Indicates whether this node should have the ioncube loader enabled. See [this changelog for more information](https://support.hypernode.com/changelog/release-4853-ioncube-loader-php-hypernode-update-php7-1-sneak-peek/).
 - `password_auth`: boolean - Indicates whether password authentication for the node is allowed instead of only SSH keys.
 - `modern_ssl_config_enabled`: boolean - Indicates whether this node will have the Mozilla Modern SSL configuration 
 configured. This provides a higher level of security but loses compatibility with some browsers. For more information 
