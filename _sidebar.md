@@ -16,6 +16,7 @@
   * [Hypernode-API](/Documentation/hypernode-api/README.md)
   * [Whitelisting](/Documentation/hypernode-api/whitelisting/README.md)
   * [Settings](/Documentation/hypernode-api/settings/README.md)
+  * [Chargebee SSO](/Documentation/hypernode-api/chargebee/SSO/README.md)
 
 * Hypernode-VPN
 
