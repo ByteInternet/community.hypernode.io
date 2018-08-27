@@ -9,12 +9,17 @@ to login to Chargebee and manage your subscriptions. You can request the URL lik
 ```bash
 curl https://api.hypernode.com/v1/chargebee/sso/<your_email>/ -X GET --header "Authorization: Token <your_hypernode_api_token>"
 ```
-The return value should look like this if there is a Chargebee account associated with your email:
+The returned JSON should contain a `access_url` if there is a Chargebee account associated with your email:
 ```json
 {
-  "chargebee_sso_url": "https://hypernode.chargebee.com/portal/v2/authenticate?token=my_token"
+  ...
+  "access_url": "https://hypernode.chargebee.com/portal/v2/authenticate?token=my_token"
+  ...
 }
 ```
+For more information see the official Chargebee API docs:
+https://www.chargebee.com/checkout-portal-docs/api-portal.html#integration-steps
+
 If there is no Chargebee account associated with your account a 404 with the following will be returned:
 ```json
 {
