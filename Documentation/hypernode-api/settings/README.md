@@ -36,3 +36,4 @@ this setting see [this changelog](https://support.hypernode.com/changelog/releas
 - `varnish_version`: ("4.0") - Which varnish version to use for your node.
 - `varnish_enabled`: boolean - Indicates whether Varnish should be used for this node or not.
 - `varnish_secret`: string - Read-only: The Varnish secret for this node.
+- `rabbitmq_enabled`: boolean - Indicates whether RabbitMQ should be enabled on this node or not.
