@@ -20,6 +20,7 @@ directory of the `app` user or in the `/tmp/` directory of the `root` user. The 
 of space available as the `app` user, so enabling this might prevent MySQL from taking up all disk space at the cost of
 taking of the space of the `app` user. Mostly useful for large shops who create a lot of temporary tables with MySQL. 
 For more information about this settings see [this changelog](https://support.hypernode.com/changelog/release-5133-configurable-mysql-temporary-directory-extra-space/).
+- `mysql_disable_stopwords`: boolean - [Opt-in disable stopwords for MyISAM Search Indexes](https://support.hypernode.com/changelog/release-6079-opt-in-disable-stopwords-for-myisam-search-indexes/).
 - `redis_persistent_instance`: boolean - Indicates whether another Redis instance will be started which can be used for 
 sessions instead of caching. Please note that this might require some changes on your end. For more information about this setting see [this changelog](https://support.hypernode.com/changelog/experimental-changes-redis-sessions-aws-performance/).
 - `firewall_block_ftp_enabled`: boolean - Indicates whether FTP is completely blocked or not in favour of SFTP. For 
