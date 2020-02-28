@@ -32,3 +32,6 @@ This endpoint allows you to retireve the SSO URL for Chargebee. If you are a cus
 will be able to retrieve the login URL for Chargebee which you can then use to login and manage your subscriptions.
 For more information about this endpoint have a look at [this endpoint's documentation](
 /Documentation/hypernode-api/chargebee/SSO/README.md).
+
+### Perform preinstall
+This endpoint allows you to perform a preinstall of magento or akeneo on your Hypernode. For more information about this endpoint have a look at [this enpoint's documentation](/Documentation/hypernode-api/preinstall/README.md).
