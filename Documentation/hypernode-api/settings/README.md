@@ -22,6 +22,8 @@ of space available as the `app` user, so enabling this might prevent MySQL from 
 taking of the space of the `app` user. Mostly useful for large shops who create a lot of temporary tables with MySQL. 
 For more information about this settings see [this changelog](https://support.hypernode.com/changelog/release-5133-configurable-mysql-temporary-directory-extra-space/).
 - `mysql_disable_stopwords`: boolean - [Opt-in disable stopwords for MyISAM Search Indexes](https://support.hypernode.com/changelog/release-6079-opt-in-disable-stopwords-for-myisam-search-indexes/).
+- `mysql_enable_large_thread_stack`: boolean - [Opt-in enable large mysql thread_stack](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_stack).
+This setting allows you to change the MySQL thread_stack from the default of `192k` to `512k`. We've seen that in some cases this setting can sometimes prevent some issues in Shopware shops with complex queries. Also see [this changelog](https://support.hypernode.com/changelog/release-7083-opt-in-large-mysql-thread_stack/).
 - `redis_persistent_instance`: boolean - Indicates whether another Redis instance will be started which can be used for 
 sessions instead of caching. Please note that this might require some changes on your end. For more information about this setting see [this changelog](https://support.hypernode.com/changelog/experimental-changes-redis-sessions-aws-performance/).
 - `firewall_block_ftp_enabled`: boolean - Indicates whether FTP is completely blocked or not in favour of SFTP. For 
