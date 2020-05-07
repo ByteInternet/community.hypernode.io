@@ -43,3 +43,7 @@ this setting see [this changelog](https://support.hypernode.com/changelog/releas
 - `varnish_enabled`: boolean - Indicates whether Varnish should be used for this node or not.
 - `varnish_secret`: string - Read-only: The Varnish secret for this node.
 - `rabbitmq_enabled`: boolean - Indicates whether RabbitMQ should be enabled on this node or not.
+- `new_relic_enabled`: boolean - Indicates whether New Relic should be enabled on this node or not. Note that enabling this service
+might impact the performance of your shop.
+- `new_relic_secret`: - string - The New Relic secret for your New Relic setup.
+- `new_relic_app_name`: string - The New Relic app name for your New Relic setup.
