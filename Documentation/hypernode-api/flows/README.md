@@ -3,7 +3,12 @@
 The following endpoints are available:
 
 ```python
-GET: https://api.hypernode.com/api/logbook/v1/logbooks/<your_app_name>/flows/
+GET: https://api.hypernode.com/logbook/v1/logbooks/<your_app_name>/flows/
+```
+
+Curl example:
+```
+curl https://api.hypernode.com/logbook/v1/logbooks/<your_app_name>/flows/ -X GET --header "Authorization: Token <your_token>"
 ```
 
 ## GET
@@ -12,49 +17,49 @@ GET: https://api.hypernode.com/api/logbook/v1/logbooks/<your_app_name>/flows/
 The JSON formatted output looks like:
 ```python
 {
-    "previous": null,
-    "next": "https://api.hypernode.com/api/logbook/v1/logbooks/vdloo/flows/?limit=50&offset=50",
-    "count": 2,
-    "results": [
-        {
-            "state": null,
-            "progress": {
-                "total": 0,
-                "running": [],
-                "completed": 0
-            },
-            "uuid": "94a8c1d3-3463-42f4-bdfb-00d58bcc14e7",
-            "tracker": {
-                "description": null,
-                "uuid": null
-            },
-            "created_at": "2018-08-29T14:40:43Z",
-            "updated_at": null,
-            "name": "update_node",
-            "logbook": "vdloo"
-        },
-        {
-            "state": "running",
-            "progress": {
-                "total": 24,
-                "running": [
-                    "stop_mysql_on_volume",
-                    "verify_node_fits_on_new_product",
-                    "ensure_nodes"
-                ],
-                "completed": 8
-            },
-            "uuid": "8eee848b-1be8-4afe-a0bd-56ae8ea10798",
-            "tracker": {
-                "description": null,
-                "uuid": null
-            },
-            "created_at": "2018-08-29T14:40:37Z",
-            "updated_at": "2018-08-29T14:40:40Z",
-            "name": "xgrade_app",
-            "logbook": "vdloo"
-        },
-    ]
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "uuid": "be1c54d7-c8ff-4890-8610-ba254224b6e9",
+      "state": "running",
+      "name": "xgrade_app",
+      "created_at": "2020-07-15T10:03:32Z",
+      "updated_at": "2020-07-15T10:03:33Z",
+      "progress": {
+        "completed": 8,
+        "running": [
+          "stop_mysql_on_volume",
+          "verify_node_fits_on_new_product",
+          "ensure_nodes"
+        ],
+        "total": 34
+      },
+      "logbook": "vdloo",
+      "tracker": {
+        "description": null,
+        "uuid": null
+      }
+    },
+    {
+      "uuid": "fc432957-517e-4fc7-8bd6-e48ab3183d56",
+      "state": "success",
+      "name": "create_backup",
+      "created_at": "2020-07-15T00:07:09Z",
+      "updated_at": "2020-07-15T00:07:24Z",
+      "progress": {
+        "completed": 2,
+        "running": [],
+        "total": 2
+      },
+      "logbook": "vdloo",
+      "tracker": {
+        "description": null,
+        "uuid": null
+      }
+    },
+  ]
 }
 ```
 
